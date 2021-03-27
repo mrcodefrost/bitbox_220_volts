@@ -1,13 +1,10 @@
 import 'package:bitbox_220_volts/constants.dart';
-import 'package:bitbox_220_volts/screens/covid_guidelines.dart';
 import 'package:bitbox_220_volts/screens/heart_loading_page.dart';
 import 'package:bitbox_220_volts/screens/loading_page.dart';
+import 'package:bitbox_220_volts/screens/under_construction.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import 'bmi_page.dart';
-import 'covid_page.dart';
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -49,7 +46,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                           top: 70,
                           left: 220,
                           child: Text(
-                            ' Remote \n Application \n For Health \n Assistance And \n Tracking',
+                            ' Remote \n Application for\n Health \n Assistance And \n Tracking',
                             style: kHeadingTextStyle.copyWith(
                               color: Colors.white,
                             ),
@@ -82,8 +79,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             GestureDetector(
               onTap: () {
                 setState(() {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => CovidPage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => UnderConstructionPage()));
                 });
               },
               child: ScreenCardsRight(
@@ -94,8 +93,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             GestureDetector(
                 onTap: () {
                   setState(() {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => BMIPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => UnderConstructionPage()));
                   });
                 },
                 child: ScreenCardsLeft(
@@ -130,7 +131,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => CovidGuidelinesPage()));
+                            builder: (context) => UnderConstructionPage()));
                   });
                 },
                 child: ScreenCardsRight(

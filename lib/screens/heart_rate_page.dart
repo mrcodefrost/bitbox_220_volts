@@ -1,3 +1,4 @@
+import 'package:bitbox_220_volts/constants.dart';
 import 'package:flutter/material.dart';
 
 class HeartRatePage extends StatefulWidget {
@@ -19,14 +20,33 @@ class _HeartRatePageState extends State<HeartRatePage> {
   }
 
   void updateHeart(dynamic arduinoData) {
-    heartRate = arduinoData['feeds'][2]['field1'];
+    heartRate = arduinoData['feeds'][49]['field1'];
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Heart Rate $heartRate'),
+        title: Center(child: Text('Heart Rate')),
+      ),
+      body: Column(
+        children: <Widget>[
+          Container(
+            child: Image(
+              image: AssetImage('assets/heart.png'),
+            ),
+          ),
+          Text(
+            'Your current Heart Rate in BPM is',
+            style: kTitleTextstyle.copyWith(color: Colors.pink.shade700),
+          ),
+          Container(
+            child: Text(
+              '$heartRate',
+              style: TextStyle(fontSize: 50.0),
+            ),
+          ),
+        ],
       ),
     );
   }

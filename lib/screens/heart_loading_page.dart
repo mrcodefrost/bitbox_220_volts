@@ -8,6 +8,12 @@ class HeartLoadingPage extends StatefulWidget {
 }
 
 class _HeartLoadingPageState extends State<HeartLoadingPage> {
+  @override
+  void initState() {
+    super.initState();
+    getPulseData();
+  }
+
   void getPulseData() async {
     SensorData sensorData = SensorData();
     var completeData = await sensorData.getSensorData();

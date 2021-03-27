@@ -1,3 +1,4 @@
+import 'package:bitbox_220_volts/constants.dart';
 import 'package:flutter/material.dart';
 
 class TemperaturePage extends StatefulWidget {
@@ -19,7 +20,7 @@ class _TemperaturePageState extends State<TemperaturePage> {
   }
 
   void updateTemp(dynamic arduinoData) {
-    temperature = arduinoData['feeds'][2]['field2'];
+    temperature = arduinoData['feeds'][49]['field2'];
   }
 
   @override
@@ -28,14 +29,26 @@ class _TemperaturePageState extends State<TemperaturePage> {
       appBar: AppBar(
         title: Center(child: Text('Temperature')),
       ),
-      body: Column(
-        children: <Widget>[
-          Spacer(),
-          Container(
-            child: Text('Temperature displayed here $temperature'),
-          ),
-          Spacer(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Container(
+              child: Center(
+                child: Image(
+                  image: AssetImage('assets/temperature_check.png'),
+                ),
+              ),
+            ),
+            Container(
+              child: Text(
+                'Your current temperature in fahrenheit is',
+                style: kTitleTextstyle.copyWith(color: Colors.pink.shade700),
+              ),
+            ),
+            Text('$temperature',
+                style: TextStyle(fontSize: 50.0, color: Colors.green.shade400)),
+          ],
+        ),
       ),
     );
   }

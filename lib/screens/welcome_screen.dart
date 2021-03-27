@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'bmi_page.dart';
 import 'covid_page.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -64,29 +65,74 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       MaterialPageRoute(builder: (context) => CovidPage()));
                 });
               },
-              child: Container(
-                height: 80.0,
-                width: 390.0,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: Colors.pink.shade50),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Image(
-                      image: AssetImage('assets/virus_emoji.jpg'),
-                    ),
-                    Divider(),
-                    Text(
-                      'Corona Virus Updates',
-                      style: kTitleTextstyle.copyWith(color: Colors.pink),
-                    ),
-                  ],
-                ),
-              ),
+              child: ScreenCards(
+                  imagePath: 'assets/virus_emoji.jpg',
+                  message: 'Corona Virus Updates'),
             ),
+            SizedBox(height: 20.0),
+            GestureDetector(
+                onTap: () {
+                  setState(() {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => BMIPage()));
+                  });
+                },
+                child: ScreenCards(
+                    imagePath: 'assets/new_heart.png',
+                    message: 'BMI Calculator')),
+            SizedBox(height: 20.0),
+            GestureDetector(
+                onTap: () {
+                  setState(() {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => BMIPage()));
+                  });
+                },
+                child: ScreenCards(
+                    imagePath: 'assets/new_heart.png', message: 'Temperature')),
+            SizedBox(height: 20.0),
+            GestureDetector(
+                onTap: () {
+                  setState(() {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => BMIPage()));
+                  });
+                },
+                child: ScreenCards(
+                    imagePath: 'assets/new_heart.png', message: 'Heart Rate'))
           ],
         ),
+      ),
+    );
+  }
+}
+
+class ScreenCards extends StatelessWidget {
+  final String imagePath;
+  final String message;
+
+  ScreenCards({@required this.imagePath, @required this.message});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 80.0,
+      width: 390.0,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
+          color: Colors.pink.shade50),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Image(
+            image: AssetImage(imagePath),
+          ),
+          Divider(),
+          Text(
+            message,
+            style: kTitleTextstyle.copyWith(color: Colors.pink),
+          ),
+        ],
       ),
     );
   }

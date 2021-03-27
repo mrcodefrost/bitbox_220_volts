@@ -17,7 +17,6 @@ class SensorData {
       print(decodedData);
     } else {
       print(response.statusCode);
-      //http error
     }
   }
 }

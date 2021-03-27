@@ -38,7 +38,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         Container(),
                         SvgPicture.asset(
                           "assets/new_nurse.svg",
-                          width: 200,
+                          width: 195,
                           fit: BoxFit.fitHeight,
                           alignment: Alignment.bottomLeft,
                         ),
@@ -65,8 +65,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       MaterialPageRoute(builder: (context) => CovidPage()));
                 });
               },
-              child: ScreenCards(
-                  imagePath: 'assets/virus_emoji.jpg',
+              child: ScreenCardsRight(
+                  imagePath: 'assets/new_virus_emoji.png',
                   message: 'Corona Virus Updates'),
             ),
             SizedBox(height: 20.0),
@@ -77,7 +77,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         MaterialPageRoute(builder: (context) => BMIPage()));
                   });
                 },
-                child: ScreenCards(
+                child: ScreenCardsLeft(
                     imagePath: 'assets/new_heart.png',
                     message: 'BMI Calculator')),
             SizedBox(height: 20.0),
@@ -88,7 +88,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         MaterialPageRoute(builder: (context) => BMIPage()));
                   });
                 },
-                child: ScreenCards(
+                child: ScreenCardsRight(
                     imagePath: 'assets/new_heart.png', message: 'Temperature')),
             SizedBox(height: 20.0),
             GestureDetector(
@@ -98,7 +98,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         MaterialPageRoute(builder: (context) => BMIPage()));
                   });
                 },
-                child: ScreenCards(
+                child: ScreenCardsLeft(
                     imagePath: 'assets/new_heart.png', message: 'Heart Rate'))
           ],
         ),
@@ -107,11 +107,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   }
 }
 
-class ScreenCards extends StatelessWidget {
+class ScreenCardsRight extends StatelessWidget {
   final String imagePath;
   final String message;
 
-  ScreenCards({@required this.imagePath, @required this.message});
+  ScreenCardsRight({@required this.imagePath, @required this.message});
 
   @override
   Widget build(BuildContext context) {
@@ -131,6 +131,37 @@ class ScreenCards extends StatelessWidget {
           Text(
             message,
             style: kTitleTextstyle.copyWith(color: Colors.pink),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ScreenCardsLeft extends StatelessWidget {
+  final String imagePath;
+  final String message;
+
+  ScreenCardsLeft({@required this.imagePath, @required this.message});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 80.0,
+      width: 390.0,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
+          color: Colors.pink.shade50),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Text(
+            message,
+            style: kTitleTextstyle.copyWith(color: Colors.pink),
+          ),
+          Divider(),
+          Image(
+            image: AssetImage(imagePath),
           ),
         ],
       ),

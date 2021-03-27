@@ -1,6 +1,9 @@
 import 'package:bitbox_220_volts/constants.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import 'covid_page.dart';
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -18,7 +21,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ClipPath(
               clipper: MyClipper(),
               child: Container(
-                height: 300,
+                height: 280,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
@@ -33,16 +36,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       children: <Widget>[
                         Container(),
                         SvgPicture.asset(
-                          "assets/nurse.svg",
-                          width: 225,
-                          fit: BoxFit.fitWidth,
+                          "assets/new_nurse.svg",
+                          width: 200,
+                          fit: BoxFit.fitHeight,
                           alignment: Alignment.bottomLeft,
                         ),
                         Positioned(
                           top: 70,
-                          left: 180,
+                          left: 220,
                           child: Text(
-                            'Remote Application \n For Health \n Assistance And \n Tracking',
+                            ' Remote \n Application \n For Health \n Assistance And \n Tracking',
                             style: kHeadingTextStyle.copyWith(
                               color: Colors.white,
                             ),
@@ -54,10 +57,33 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ),
             ),
-            Container(
-              color: Colors.black,
-              height: 20.0,
-              width: 20.0,
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => CovidPage()));
+                });
+              },
+              child: Container(
+                height: 80.0,
+                width: 390.0,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20.0),
+                    color: Colors.pink.shade50),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Image(
+                      image: AssetImage('assets/virus_emoji.jpg'),
+                    ),
+                    Divider(),
+                    Text(
+                      'Corona Virus Updates',
+                      style: kTitleTextstyle.copyWith(color: Colors.pink),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),

@@ -14,11 +14,6 @@ class SensorData {
     if (response.statusCode == 200) {
       var data = response.body;
       var decodedData = jsonDecode(data);
-      var temp = decodedData['feeds'][2]['field2'];
-      var pulse = decodedData['feeds'][2]['field1'];
-
-      print(temp);
-
       return decodedData;
     } else {
       print(response.statusCode);

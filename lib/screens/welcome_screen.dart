@@ -1,4 +1,7 @@
 import 'package:bitbox_220_volts/constants.dart';
+import 'package:bitbox_220_volts/screens/covid_guidelines.dart';
+import 'package:bitbox_220_volts/screens/heart_loading_page.dart';
+import 'package:bitbox_220_volts/screens/loading_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -58,6 +61,24 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ),
             ),
+            Container(
+              child: Center(
+                child: Text(
+                  'Fight #COVID19 with RAHAT',
+                  style:
+                      kHeadingTextStyle.copyWith(color: Colors.pink.shade900),
+                ),
+              ),
+            ),
+            Divider(
+              indent: 70.0,
+              endIndent: 70.0,
+              thickness: 1.0,
+              color: Colors.pinkAccent.shade100,
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
             GestureDetector(
               onTap: () {
                 setState(() {
@@ -78,28 +99,62 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   });
                 },
                 child: ScreenCardsLeft(
-                    imagePath: 'assets/new_heart.png',
-                    message: 'BMI Calculator')),
+                    imagePath: 'assets/bmi.png', message: 'BMI Calculator')),
             SizedBox(height: 20.0),
             GestureDetector(
                 onTap: () {
                   setState(() {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => BMIPage()));
+                        MaterialPageRoute(builder: (context) => LoadingPage()));
                   });
                 },
                 child: ScreenCardsRight(
-                    imagePath: 'assets/new_heart.png', message: 'Temperature')),
+                    imagePath: 'assets/thermometer.png',
+                    message: 'Temperature')),
             SizedBox(height: 20.0),
             GestureDetector(
                 onTap: () {
                   setState(() {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => BMIPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => HeartLoadingPage()));
                   });
                 },
                 child: ScreenCardsLeft(
-                    imagePath: 'assets/new_heart.png', message: 'Heart Rate'))
+                    imagePath: 'assets/new_heart.png', message: 'Heart Rate')),
+            SizedBox(height: 20.0),
+            GestureDetector(
+                onTap: () {
+                  setState(() {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CovidGuidelinesPage()));
+                  });
+                },
+                child: ScreenCardsRight(
+                    imagePath: 'assets/covid_guidelines_nurse.png',
+                    message: 'Covid-19 Guidelines')),
+            SizedBox(height: 20.0),
+            Divider(
+              thickness: 1.0,
+              indent: 40.0,
+              endIndent: 40.0,
+              color: Colors.grey,
+            ),
+            Container(
+              child: Text(
+                'Handcrafted in India',
+                style: kSubTextStyle.copyWith(fontWeight: FontWeight.w900),
+              ),
+            ),
+            Divider(
+              thickness: 1.0,
+              indent: 40.0,
+              endIndent: 40.0,
+              color: Colors.grey,
+            ),
           ],
         ),
       ),

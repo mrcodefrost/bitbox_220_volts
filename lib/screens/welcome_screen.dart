@@ -4,7 +4,6 @@ import 'package:bitbox_220_volts/screens/covid_guidelines.dart';
 import 'package:bitbox_220_volts/screens/heart_loading_page.dart';
 import 'package:bitbox_220_volts/screens/loading_page.dart';
 import 'package:bitbox_220_volts/screens/under_construction.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

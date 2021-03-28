@@ -1,6 +1,5 @@
 import 'package:bitbox_220_volts/models/sensor_data.dart';
 import 'package:bitbox_220_volts/screens/temperature_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoadingPage extends StatefulWidget {

@@ -30,7 +30,9 @@ class _HeartLoadingPageState extends State<HeartLoadingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('Loading, Please wait...'),
+        child: Image(
+          image: AssetImage('assets/loading_heart.png'),
+        ),
       ),
     );
   }

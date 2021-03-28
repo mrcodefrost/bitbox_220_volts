@@ -17,3 +17,24 @@ const kTitleTextstyle = TextStyle(
 );
 const kSubTextStyle =
     TextStyle(fontFamily: 'Amatic SC', fontSize: 16, color: kTextLightColor);
+
+// new constants
+
+const kBottomContainerHeight = 80.0;
+const kActiveCardColour = Color(0xFFFFCDD2);
+const kInactiveCardColour = Color(0xFFFCE4EC);
+const kBottomContainerColour = Color(0xFFEB1555);
+
+const kLabelTextStyle = TextStyle(
+  fontSize: 18.0,
+  color: Color(0xFF311B92),
+);
+
+const kNumberTextStyle = TextStyle(
+    fontSize: 50.0, fontWeight: FontWeight.w900, color: Color(0xFFD81B60));
+
+const kResultTextStyle = TextStyle(
+  color: Color(0xFFD81B60),
+  fontWeight: FontWeight.bold,
+  fontSize: 22.0,
+);

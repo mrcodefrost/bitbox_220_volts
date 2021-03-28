@@ -1,4 +1,6 @@
 import 'package:bitbox_220_volts/constants.dart';
+import 'package:bitbox_220_volts/screens/bmi_page.dart';
+import 'package:bitbox_220_volts/screens/covid_guidelines.dart';
 import 'package:bitbox_220_volts/screens/heart_loading_page.dart';
 import 'package:bitbox_220_volts/screens/loading_page.dart';
 import 'package:bitbox_220_volts/screens/under_construction.dart';
@@ -93,10 +95,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             GestureDetector(
                 onTap: () {
                   setState(() {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => UnderConstructionPage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => BMIPage()));
                   });
                 },
                 child: ScreenCardsLeft(
@@ -131,7 +131,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => UnderConstructionPage()));
+                            builder: (context) => CovidGuidelinesPage()));
                   });
                 },
                 child: ScreenCardsRight(

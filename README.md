@@ -1,8 +1,12 @@
 # bitbox_220_volts
 
+
+![10.png](https://raw.githubusercontent.com/mrcodefrost/bitbox_220_volts/main/images/10.png)
+
 RAHAT is a software-hardware integrated project developed by 220 Volts.
 
 RAHAT ( A Hindi word which means 'relief' in English ) is short for Remote Application for Health Assistance And Tracking.
+
 
 RAHAT implements sensor technology and internet to assist and track health of remote patients, such as ones in home isolation in COVID-19 Pandemic.
 It tracks live temperature and heartbeat data of user with timestamps over the Internetwork.
@@ -11,6 +15,8 @@ The mobile app based on Flutter framework has been developed as a smart portal f
 
 
 ## WHY RAHAT?
+
+![13.png](https://raw.githubusercontent.com/mrcodefrost/bitbox_220_volts/main/images/13.png)
 
 1) The current health monitoring systems are not Portable.
 2) Most Individuals don't understand Analog Data that well
@@ -23,6 +29,7 @@ The mobile app based on Flutter framework has been developed as a smart portal f
 9) Easy To Use User Interface
 
 
+
 ## MOTIVE BEHIND RAHAT
 
 It's simply not possible to allocate every sick person a bed in hospital as:
@@ -33,6 +40,8 @@ It's simply not possible to allocate every sick person a bed in hospital as:
 5) Extremely difficult to keep track of patients details 24 X 7
 
 ## BUSINESS IDEA
+
+![11](https://raw.githubusercontent.com/mrcodefrost/bitbox_220_volts/main/images/11.png)
 
 ### Target Audience
 Anyone who is in home isolation/away from healthcare services/not financially good/ living alone.
@@ -49,6 +58,8 @@ It helps to connect directly to Specialist or loved ones who can help the user i
 
 
 ## FUTURE UPDATES
+
+![12.png](https://raw.githubusercontent.com/mrcodefrost/bitbox_220_volts/main/images/12.png)
 
 RAHAT is in it's initial development phase right now. We plan to introduce the following features in newer versions.
 

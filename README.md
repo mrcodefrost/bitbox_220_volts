@@ -10,7 +10,7 @@ Using the cloud nearby hospitals or loved ones can access the data, monitor the 
 The mobile app based on Flutter framework has been developed as a smart portal for end-users and the monitoring group.
 
 
-##WHY RAHAT?
+## WHY RAHAT?
 
 1) The current health monitoring systems are not Portable.
 2) Most Individuals don't understand Analog Data that well
@@ -23,7 +23,7 @@ The mobile app based on Flutter framework has been developed as a smart portal f
 9) Easy To Use User Interface
 
 
-##MOTIVE BEHIND RAHAT
+## MOTIVE BEHIND RAHAT
 
 It's simply not possible to allocate every sick person a bed in hospital as:
 1) It's expensive
@@ -32,23 +32,23 @@ It's simply not possible to allocate every sick person a bed in hospital as:
 4) Healthcare infrastructure is hardly available in rural areas
 5) Extremely difficult to keep track of patients details 24 X 7
 
-##BUSINESS IDEA
+## BUSINESS IDEA
 
-###Target Audience
+### Target Audience
 Anyone who is in home isolation/away from healthcare services/not financially good/ living alone.
-###Budget
+### Budget
 Health Over Money. Hardware will be available in healthcare centers/hospitals/clinics/covid camps from where patients can rent it.
 There will be a provision for buying the product in case user wish to.
-###Marketing
+### Marketing
 Google ad services & Social Media Influencers to promote our product.
 Many International/National/State/University Level programmes have been launched in support of Healthcare currently.
 We plan to use this opportunity to get support from such programmes.
-###Feasability and Usage
+### Feasability and Usage
 Rahat is a Health support app, created to monitor a user's health.
 It helps to connect directly to Specialist or loved ones who can help the user in need.
 
 
-##FUTURE UPDATES
+## FUTURE UPDATES
 
 RAHAT is in it's initial development phase right now. We plan to introduce the following features in newer versions.
 
@@ -60,7 +60,3 @@ RAHAT is in it's initial development phase right now. We plan to introduce the f
 6) Using Accelerometer of smartphone or Rahat Band to detect fall( for dementia or narcolepsy patients)
 7) Adding Comprehensive Exercise Plans
 8) Dark Theme
-
-
-
-

@@ -27,7 +27,7 @@ class _HeartRatePageState extends State<HeartRatePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Heart Rate', style: kHeadingTextStyle),
+        title: Text('HEART RATE', style: kHeadingTextStyle),
       ),
       body: Column(
         children: <Widget>[

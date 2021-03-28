@@ -27,7 +27,7 @@ class _TemperaturePageState extends State<TemperaturePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Temperature', style: kHeadingTextStyle),
+        title: Text('TEMPERATURE', style: kHeadingTextStyle),
       ),
       body: SingleChildScrollView(
         child: Column(

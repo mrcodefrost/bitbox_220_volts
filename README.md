@@ -71,3 +71,5 @@ RAHAT is in it's initial development phase right now. We plan to introduce the f
 6) Using Accelerometer of smartphone or Rahat Band to detect fall( for dementia or narcolepsy patients)
 7) Adding Comprehensive Exercise Plans
 8) Dark Theme
+
+### Demo Video & Powerpoint Presentation Available in the "About the project" directory.

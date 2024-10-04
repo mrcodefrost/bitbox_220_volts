@@ -30,6 +30,7 @@ class _TemperaturePageState extends State<TemperaturePage> {
         title: Text('TEMPERATURE', style: kHeadingTextStyle),
       ),
       body: SingleChildScrollView(
+        
         child: Column(
           children: <Widget>[
             Container(

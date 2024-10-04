@@ -38,6 +38,10 @@ android {
         targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+
+        manifestPlaceholders = [appAuthRedirectScheme: "elementalists.bitbox_220_volts",
+                                applicationName: "elementalists.bitbox_220_volts.bitbox_220_volts"
+        ]
     }
 
     buildTypes {
